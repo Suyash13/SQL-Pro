@@ -1,0 +1,26 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<link rel="stylesheet" href="/app.css">
+
+<div class="flex-container">
+    <div class="container">
+        <h1>JOIN US</h1>
+        <p class="lead">Enter your email to join <strong>
+                <%=data%>
+            </strong> others on our waitlist. We are 100% not a cult. </p>
+        <form method="POST" action='/register' onsubmit="disableEmptyInputs(this)">
+            <input type="text" name="email" class="form" placeholder="Enter Your Email">
+            <input type="text" name="name" class="form" placeholder="Enter Your Name">
+            <input type="text" name="mobileno" class="form" placeholder="Enter Your Mobile Number">
+            <input type="text" name="pan" class="form" placeholder="Enter Your PAN Number">
+            <button>Join Now</button>
+        </form>
+        <form method="POST" action='/update' onsubmit="disableEmptyInputs(this)">
+            <input type="text" name="email" class="form" placeholder="Enter Your Email">
+            <input type="text" name="name" class="form" placeholder="Enter Your Name">
+            <input type="text" name="mobileno" class="form" placeholder="Enter Your Mobile Number">
+            <input type="text" name="pan" class="form" placeholder="Enter Your PAN Number">
+            <div><input type="number" name="id" class="form" placeholder="Enter Your ID"></div>
+            <button>Update Now</button>
+        </form>
+    </div>
+</div>
